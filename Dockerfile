@@ -1,6 +1,6 @@
 FROM alpine
 
-LABEL MAINTAINER "ZhangSean <zxf2342@qq.com>"
+LABEL MAINTAINER "mgd <suporte@mgdtecnologia.com.br>"
 
 ENV FRP_VERSION=v0.41.0
 
