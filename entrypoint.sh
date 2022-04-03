@@ -11,10 +11,10 @@ if [ $MODE = server ]; then
     sed -i -e "s|dashboard_port = 7500|dashboard_port = $DASHBOARD_PORT|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_USER ]; then
-    sed -i -e "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_USER|g" /frp/frps.ini
+    sed -i -e "s|dashboard_user = admin|dashboard_user = $DASHBOARD_USER|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_PWD ]; then
-    sed -i -e "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_PWD|g" /frp/frps.ini
+    sed -i -e "s|dashboard_user = admin|dashboard_user = $DASHBOARD_PWD|g" /frp/frps.ini
   fi
   more /frp/frps.ini
   /frp/frps -c /frp/frps.ini
