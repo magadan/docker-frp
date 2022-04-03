@@ -10,9 +10,9 @@ RUN addgroup -S frp \
  && adduser -D -S -h /var/frp -s /sbin/nologin -G frp frp \
  && apk add --no-cache curl \
  && curl -fSL https://github.com/magadan/docker-frp/raw/master/frp_railway.tar.gz -o frp_railway.tar.gz \
- && tar -zxv -f frp.tar.gz \
- && rm -rf frp.tar.gz \
- && mv frp_*_linux_amd64 /frp \
+ && tar -zxv -f frp_railway.tar.gz \
+ && rm -rf frp_railway.tar.gz \
+ && mv frp_railway /frp \
  && chown -R frp:frp /frp \
  && mv /entrypoint.sh /frp/
 
