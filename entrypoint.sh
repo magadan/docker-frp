@@ -39,5 +39,6 @@ else
   if [ $REMOTE_PORT ]; then
     sed -i "s|remote_port = 6000|remote_port = $REMOTE_PORT|g" /frp/frpc.ini
   fi
+  cat /frp/frpc.ini
   /frp/frpc -c /frp/frpc.ini
 fi
