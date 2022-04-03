@@ -14,7 +14,7 @@ if [ $MODE = server ]; then
     sed "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_USER|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_PWD ]; then
-    sed -i "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_PWD|g" /frp/frps.ini
+    sed "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_PWD|g" /frp/frps.ini
   fi
   cat /frp/frps.ini
   /frp/frps -c /frp/frps.ini
