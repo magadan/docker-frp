@@ -5,7 +5,7 @@ fi
 
 if [ $MODE = server ]; then
   if [ $BIND_PORT ]; then
-    sed -i -e "s|bind_port = 7000|bind_port = $BIND_PORT|g" /frp/frps.ini
+    sed -i "s|bind_port = 7000|bind_port = $BIND_PORT|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_PORT ]; then
     sed -i  "s|dashboard_port = 7500|dashboard_port = $DASHBOARD_PORT|g" /frp/frps.ini
