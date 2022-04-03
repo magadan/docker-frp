@@ -20,6 +20,6 @@ USER frp
 
 WORKDIR /frp
 
-EXPOSE 6000 7000
+EXPOSE 6000 7000 7500
 
 CMD ["/frp/entrypoint.sh"]
