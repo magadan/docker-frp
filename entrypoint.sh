@@ -8,15 +8,15 @@ if [ $MODE = server ]; then
     sed -i "s|bind_port = 7000|bind_port = $BIND_PORT|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_PORT ]; then
-    sed -e "s|dashboard_port = 7500|dashboard_port = $DASHBOARD_PORT|g" /frp/frps.ini
+    sed -i "s|dashboard_port = 7500|dashboard_port = $DASHBOARD_PORT|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_USER ]; then
-    sed -e "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_USER|g" /frp/frps.ini
+    sed -i "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_USER|g" /frp/frps.ini
   fi
   if [ $DASHBOARD_PWD ]; then
-    sed -e "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_PWD|g" /frp/frps.ini
+    sed -i "s|dashboard_user = 7500|dashboard_user = $DASHBOARD_PWD|g" /frp/frps.ini
   fi
-  cat /frp/frps.ini
+  more /frp/frps.ini
   /frp/frps -c /frp/frps.ini
 else
   if [ $SERVER_ADDR ]; then
@@ -40,6 +40,6 @@ else
   if [ $REMOTE_PORT ]; then
     sed -i "s|remote_port = 6000|remote_port = $REMOTE_PORT|g" /frp/frpc.ini
   fi
-  cat /frp/frpc.ini
+  more /frp/frpc.ini
   /frp/frpc -c /frp/frpc.ini
 fi
