@@ -15,6 +15,7 @@ if [ $MODE = server ]; then
       if [ $DASHBOARD_PWD ]; then
     sed -i "s|dashboard_pwd = 7500|dashboard_port = $DASHBOARD_PWD|g" /frp/frps.ini
   fi
+  cat /frp/frps.ini
   /frp/frps -c /frp/frps.ini
 else
   if [ $SERVER_ADDR ]; then
